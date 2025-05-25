@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="Assets/reconnaissance.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reconXhunter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="website model images\reconnaissance.png" alt="Logo" class="brand-logo">
+            <span class="brand-title">reconXhunter</span>
+        </div>
+    </nav>
+    <section class="disclaimer-section-top">
+        <button id="theme-toggle" class="btn-small" aria-label="Toggle dark mode">🌙</button>
+        <i class="fas fa-exclamation-triangle disclaimer-icon"></i>
+        Use only for publicly available information
+    </section>
+</header>
+    <main class="container">
+    <!-- Disclaimer Sectidisclaimer-section-topon -->
+    
+<div class="hi">
+    <h1>"Uncover Publicly Available Intelligence In Seconds!"</h1>
+</div>
+   
+</main>
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <h2>OSINT Information Gathering</h2>
+                <p>Search for publicly available information across multiple platforms</p>
+                
+                <div class="search-form">
+                    <div class="input-group">
+                        <label for="searchType">Search Type:</label>
+                        <select id="searchType">
+                            <option value="email">Email Address</option>
+                            <option value="phone">Phone Number</option>
+                            <option value="username">Username</option>
+                            <option value="name">Full Name</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="searchInput">Search Query:</label>
+                        <input type="text" id="searchInput" placeholder="Enter email, phone, username, or name">
+                    </div>
+                    
+                    <div class="platform-selection">
+    <label>Select Platforms to Search:</label>
+    <div class="platform-grid">
+        <label class="platform-item">
+            <input type="checkbox" value="google" checked>
+            <span><i class="fab fa-google" style="color:#00a911"></i> Google</span>
+        </label>
+        <label class="platform-item">
+            <input type="checkbox" value="facebook" checked>
+            <span><i class="fab fa-facebook" style="color:#1877F3"></i> Facebook</span>
+        </label>
+        <label class="platform-item">
+        <input type="checkbox" value="twitter" checked>
+        <span><i class="fab fa-twitter" style="color:#1DA1F2"></i> Twitter</span>
+        </label>
+        <label class="platform-item">
+            <input type="checkbox" value="instagram" checked>
+            <span><i class="fab fa-instagram" style="color:#E4405F"></i> Instagram</span>
+        </label>
+        <label class="platform-item">
+            <input type="checkbox" value="linkedin" checked>
+            <span><i class="fab fa-linkedin" style="color:#0A66C2"></i> LinkedIn</span>
+        </label>
+        <label class="platform-item">
+            <input type="checkbox" value="github" checked>
+            <span><i class="fab fa-github" style="color:#333"></i> GitHub</span>
+        </label>
+        <label class="platform-item">
+            <input type="checkbox" value="reddit" checked>
+            <span><i class="fab fa-reddit" style="color:#FF4500"></i> Reddit</span>
+        </label>
+        <label class="platform-item">
+            <input type="checkbox" value="youtube" checked>
+            <span><i class="fab fa-youtube" style="color:#FF0000"></i> YouTube</span>
+        </label>
+    </div>
+</div>
+                    
+                    <button id="searchBtn" class="btn-primary"> Click To Search 
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress-section" class="progress-section hidden">
+            <div class="progress-container">
+                <h3>Searching Platforms...</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">Initializing search...</div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="results-section hidden">
+            <div class="results-header">
+                <h3>Search Results for "<span id="searchQuery"></span>"</h3>
+                <div class="results-summary">
+                    <span class="found-count">0 Results Found</span>
+                    <span class="platforms-searched">0 Platforms Searched</span>
+                </div>
+            </div>
+
+            <div class="results-container" id="resultsContainer">
+                <!-- Results will be populated here -->
+            </div>
+
+            <div class="export-actions">
+                <button id="exportJsonBtn" class="btn-secondary">
+                    <i class="fas fa-download"></i> Export JSON
+                </button>
+                <button id="exportCsvBtn" class="btn-secondary">
+                    <i class="fas fa-file-csv"></i> Export CSV
+                </button>
+                <button id="newSearchBtn" class="btn-outline">
+                    <i class="fas fa-plus"></i> New Search
+                </button>
+            </div>
+        </section>
+    </main>
+    
+<footer class="footer">
+    <div class="footer-content">
+        <p>
+            &copy; reconXhunter - For research use only.<br>
+            <span class="footer-disclaimer">
+                Respect privacy laws and platform terms. No data is stored or misused.
+            </span>
+        
+        </p>
+        <div class="footer-links">
+            <a href="https://github.com/Gamer-629" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+            </a> <br>
+            <div class="jok">
+            <h1>contact us:</h1>
+            <h2>
+                gamingtrigger61@gmail.com
+            </h2>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    <script src="Javascript/utils.js"></script>
+    <script src="Javascript/platform.js"></script>
+    <script src="Javascript/os-int.js"></script>
+    <script src="Javascript/app.js"></script>
+    <script>
+    // Dark mode toggle logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('theme-toggle');
+        if (btn) {
+            btn.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                // Only keep the emoji, do not change button text
+                // btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+                btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            });
+        }
+    });
+</script>
+</body>
+</html>

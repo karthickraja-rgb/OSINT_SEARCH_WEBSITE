@@ -1,0 +1,577 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ...existing code... */
+
+body {
+    background: #ffffff;
+    color: #222222;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif,italic;
+    transition: background 0.3s, color 0.3s;
+    /* padding-top: 110px;  Remove this to fix header gap */
+}
+
+/* --- Dark mode styles --- */
+body.dark-mode {
+    background: #181a1b;
+    color: #f1f1f1;
+}
+
+body.dark-mode header {
+    background: #23272a;
+}
+
+body.dark-mode .btn-small {
+    background: #23272a;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .disclaimer-section-top {
+    background: #23272a;
+    color: #ffb347;
+}
+
+body.dark-mode .brand-title {
+    color: #ffb347;
+}
+
+body.dark-mode .hi h1 {
+    color: #1da1f2;
+}
+
+body.dark-mode .search-section {
+    background: #23272a;
+    color: #f1f1f1;
+}
+
+body.dark-mode .footer {
+    background: #23272a;
+    color: #f1f1f1;
+}
+
+body.dark-mode .footer-disclaimer {
+    color: #ffb347;
+}
+
+body.dark-mode .search-container,
+body.dark-mode .progress-section,
+body.dark-mode .results-section {
+    background: #23272a !important;
+    color: #f1f1f1 !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ...existing code... */
+
+.search-container,
+.progress-section,
+.results-section {
+    background: rgba(255, 255, 255, 0.95);
+    color: inherit; /* Inherit from body for dynamic color */
+    /* ...existing code... */
+}
+
+.search-container h2,
+.search-container p,
+.input-group label,
+.platform-selection label,
+.results-header,
+.results-summary span,
+.found-content p {
+    color: inherit; /* Inherit from parent for dynamic color */
+}
+
+/* For headings, you can set a different color in dark mode if you want */
+body.dark-mode .search-container h2,
+body.dark-mode .results-header {
+    color: #1da1f2;
+}
+body.dark-mode .search-container p,
+body.dark-mode .results-summary span,
+body.dark-mode .found-content p {
+    color: #f1f1f1;
+}
+
+/* Make platform checkbox text dynamic */
+.platform-item span {
+    color: inherit; /* Inherit from parent for dynamic color */
+}
+
+/* In dark mode, ensure checkbox text is light */
+body.dark-mode .platform-item span {
+    color: #f1f1f1;
+}
+
+/* Dark mode toggle emoji button at top right */
+#theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.7em;
+    cursor: pointer;
+    box-shadow: none;
+    color: #222;
+    padding: 0 10px 0 0;
+    margin-right: 8px;
+    vertical-align: middle;
+    position: static;
+}
+
+body.dark-mode #theme-toggle {
+    color: #f1f1f1;
+}
+
+#theme-toggle:focus {
+    outline: none;
+}
+
+/* ...existing code... */
+.hi {
+    margin-top: -40px;
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.hi h1 {
+    color: #0aa6b4; /* Blue color */
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif,italic;
+    font-size: 2.1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(30,30,30,0.08);
+    font-style: italic;
+}
+
+/* ...existing code... */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px; /* Adjust based on your header's height */
+    width: 100%;
+    z-index: 9999;
+    background: #000000; /* Or your preferred background */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Add padding-top to main container to prevent content from hiding under the header */
+main.container {
+    padding-top: 110px; /* Adjust based on your header's height */
+}
+
+.brand-logo {
+    width: auto;      /* Adjust size as needed */
+    height: 40px;
+    margin-right: 10px;
+    /* Optional: rounded corners */
+}
+nav{
+    align-items: center;
+    padding: 30px 20px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+.brand-title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-left: 8px;
+    color: #ff6315;
+    /* Remove or reduce any margin-top or margin-bottom if present */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.disclaimer-section-top {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 0.86em;         /* smaller text */
+    color: #ffffff;
+    background: hsla(59, 100%, 76%, 0.347);
+    padding: 16px 16px;
+    border-radius: 8px;
+    font-weight: 350;          /* thinner font weight */
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.jok {
+    margin-top:1px;
+    padding: 10px 18px;
+    background: rgba(30,30,30,0.18);
+    border-radius: 8px;
+    display: inline-block;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.jok h1 {
+    font-size: 1.05em;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.jok h2 {
+    font-size: 0.8em;
+    margin: 0;
+    font-weight: 400;
+    color: #ffffff;
+    word-break: break-all;
+    letter-spacing: 0.1px;
+}
+
+.disclaimer-icon {
+    color: #ff9800;
+    font-size: 1.2em;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 3rem;
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.733);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.267);
+    backdrop-filter: blur(30px);
+}
+
+.search-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #0aa6b4;
+    font-weight: 700;
+}
+
+.search-container p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.search-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #1e3c72;
+}
+
+/* Platform Selection */
+.platform-selection {
+    margin-bottom: 2rem;
+}
+
+.platform-selection label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+
+.platform-item {
+    display: flex !important;
+    align-items: center;
+    padding: 0.5rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: normal !important;
+    margin-bottom: 0 !important;
+}
+
+.platform-item:hover {
+    border-color: #1e3c72;
+    background: rgba(30, 60, 114, 0.05);
+}
+
+.platform-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: auto;
+}
+
+.platform-item span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+/* Buttons */
+
+.btn-primary {
+    width: 100%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(30, 60, 114, 0.3);
+}
+
+.btn-secondary {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1e3c72;
+    border: 2px solid #1e3c72;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-outline:hover {
+    background: #1e3c72;
+    color: white;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Progress Section */
+.progress-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #e1e5e9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-text {
+    color: #666;
+    font-weight: 600;
+}
+
+/* Results Section */
+.results-section {
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e1e5e9;
+}
+
+.results-summary {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.results-summary span {
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.result-actions a{
+    display: inline-block;
+    margin-top: 0.5em;
+    padding:0.4em 1em;
+    background:rgba(29, 161, 242, 0.1);
+    color: #1da1f2;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s color 0.2s;
+    box-shadow:10px;
+    gap: 0.5rem;
+    
+}
+
+.export-actions {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e1e5e9;
+}
+
+/* Footer */
+/* Add to css/style.css */
+.footer {
+    background: #181a1b;
+    color: #ccc;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.95em;
+    border-top: 1px solid #232323;
+}
+.footer a {
+    color: #1da1f2;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-disclaimer {
+    display: block;
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 5px;
+}
+.footer-links {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-warning {
+        margin-top: 1rem;
+    }
+    
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .results-summary {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+.found-content {
+    background: rgba(29, 161, 242, 0.08); /* subtle blue background */
+    border-left: 4px solid #1da1f2;
+    padding: 1em 1.2em;
+    border-radius: 8px;
+    margin-bottom: 0.7em;
+}
+
+.found-content h4 {
+    color: #1da1f2;
+    margin: 0 0 0.3em 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.found-content p {
+    color: #222;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: url('earth-8552339.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.15; /* Adjust for desired faintness */
+    pointer-events: none;
+}
+
+/* Make sure your main content is above the background */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+

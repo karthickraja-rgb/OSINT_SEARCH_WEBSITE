@@ -1,0 +1,199 @@
+/* Result Cards */
+.result-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #1e3c72;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.platform-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold; /* Make platform names bold */
+}
+
+.platform-badge strong {
+    font-weight: bold;
+}
+
+.platform-badge.google {
+    background: rgba(66, 133, 244, 0.1);
+    color: #4285f4;
+}
+
+.platform-badge.facebook {
+    background: rgba(24, 119, 242, 0.1);
+    color: #1877f2;
+}
+
+.platform-badge.twitter {
+    background: rgba(29, 161, 242, 0.1);
+    color: #1da1f2;
+}
+
+.platform-badge.instagram {
+    background: rgba(225, 48, 108, 0.1);
+    color: #e1306c;
+}
+
+.platform-badge.linkedin {
+    background: rgba(10, 102, 194, 0.1);
+    color: #0a66c2;
+}
+
+.platform-badge.github {
+    background: rgba(36, 41, 46, 0.1);
+    color: #24292e;
+}
+
+.platform-badge.reddit {
+    background: rgba(255, 69, 0, 0.1);
+    color: #ff4500;
+}
+
+.platform-badge.youtube {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.found {
+    background: #28a745;
+    color: white;
+}
+
+.status-badge.not-found {
+    background: #dc3545;
+    color: white;
+}
+
+.status-badge.error {
+    background: #ffc107;
+    color: #333;
+}
+
+.result-content {
+    margin-bottom: 1rem;
+}
+
+.result-content h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.result-content p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.result-actions{
+    display: flex;
+    gap: 0.5rem;
+    
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    
+}
+
+.btn-visit {
+    background: #fff;
+    color: #1e3c72;
+    border: 2px solid #1da1f2;   /* Blue border for the box */
+    border-radius: 8px;           /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(30, 60, 114, 0.08); /* Optional: subtle shadow */
+    padding: 0.5em 1.2em;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+}
+
+.btn-visit:hover {
+    background: #1e3c72;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.15);
+}
+
+.btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #138496;
+}
+
+/* Loading Animations */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e1e5e9;
+    border-top: 4px solid #1e3c72;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Search Status */
+.search-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(30, 60, 114, 0.1);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.search-status.searching {
+    background: rgba(255, 193, 7, 0.1);
+    color: #856404;
+}
+
+.search-status.completed {
+    background: rgba(40, 167, 69, 0.1);
+    color: #155724;
+}
+
+.search-status.error {
+    background: rgba(220, 53, 69, 0.1);
+    color: #721c24;
+}
