@@ -7,7 +7,7 @@ Working Pictures:
 
 [Supported Formats](https://github.com/karthickraja-rgb/OSINT_SEARCH_WEBSITE/blob/main/website%20model%20images/Screenshot%202025-05-25%20120456.png)
 
-[Example use](https://github.com/Gamer-629/OSINT-Website/blob/main/Assets/Screenshot%202025-05-25%20121310.png)
+[Example use](https://github.com/karthickraja-rgb/OSINT_SEARCH_WEBSITE/blob/main/website%20model%20images/Screenshot%202025-05-25%20121310.png)
 
 
 
